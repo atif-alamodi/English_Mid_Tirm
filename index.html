@@ -76,12 +76,13 @@ const tabs=[
 {id:'m5',icon:'⚖️',label:'Module 5: Comparisons'},
 {id:'m6',icon:'📋',label:'Module 6: Instructions'},
 {id:'rev',icon:'📚',label:'Grammar & Vocab Review'},
+{id:'rq',icon:'👩‍🏫',label:"Instructor's Review (40Q)"},
 {id:'quiz',icon:'✅',label:'Quiz (50 Q)'}
 ];
 let currentTab='m2';
 const tabsEl=document.getElementById('tabs');
 tabs.forEach(t=>{const b=document.createElement('button');b.className='tab'+(t.id===currentTab?' on':'');b.textContent=t.icon+' '+t.label;b.onclick=()=>{currentTab=t.id;document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));b.classList.add('on');render();window.scrollTo({top:0,behavior:'smooth'})};b.id='tab-'+t.id;tabsEl.appendChild(b)});
-function render(){document.getElementById('content').innerHTML=sections[currentTab]||'';if(currentTab==='quiz')initQuiz();}
+function render(){document.getElementById('content').innerHTML=sections[currentTab]||'';if(currentTab==='quiz')initQuiz();if(currentTab==='rq')initRQ();}
 
 const sections={};
 
@@ -129,6 +130,15 @@ sections.m2=`<div class="card">
 <div class="fm">Negative (النفي): Subject + do/does not + base verb<small>AI does not replace teachers. ← does not لأن AI = it<br>Chatbots do not understand feelings. ← do not لأن Chatbots = they</small></div>
 <div class="fm">Yes/No Questions: Do/Does + subject + base verb?<small>Does AI help students? ← Yes, it does. / No, it doesn't.<br>Do chatbots answer questions? ← Yes, they do. / No, they don't.</small></div>
 <div class="fm">WH-Questions: WH-word + do/does + subject + base verb?<small>What does the model generate? ← ماذا ينتج النموذج؟<br>Why does AI recommend videos? ← لماذا يوصي AI بفيديوهات؟</small></div>
+
+<div class="cb g"><div class="lb gr">✏️ أمثلة شاملة - Present Simple Examples</div>
+<div class="tw"><table>
+<tr><th></th><th>he / she / it</th><th>I / you / we / they</th></tr>
+<tr><td><b>✅ Affirmative</b></td><td class="en">The app <b>recognizes</b> my voice.<br>AI <b>generates</b> text.<br>The system <b>uses</b> data.<br>The chatbot <b>helps</b> students.</td><td class="en">Students <b>use</b> apps daily.<br>We <b>write</b> prompts.<br>They <b>generate</b> reports.<br>Chatbots <b>answer</b> questions.</td></tr>
+<tr><td><b>❌ Negative</b></td><td class="en">AI <b>doesn't replace</b> teachers.<br>The system <b>doesn't understand</b> feelings.<br>It <b>doesn't work</b> offline.</td><td class="en">Students <b>don't use</b> AI for cooking.<br>We <b>don't trust</b> all outputs.<br>They <b>don't generate</b> perfect answers.</td></tr>
+<tr><td><b>❓ Yes/No Q</b></td><td class="en"><b>Does</b> AI <b>help</b> students? Yes, it does.<br><b>Does</b> the app <b>recognize</b> faces? No, it doesn't.</td><td class="en"><b>Do</b> students <b>use</b> ChatGPT? Yes, they do.<br><b>Do</b> chatbots <b>make</b> mistakes? Yes, they do.</td></tr>
+<tr><td><b>🔍 WH- Q</b></td><td class="en"><b>What does</b> AI <b>generate</b>?<br><b>How does</b> the system <b>work</b>?<br><b>Why does</b> AI <b>recommend</b> videos?</td><td class="en"><b>What do</b> students <b>use</b>?<br><b>How do</b> chatbots <b>learn</b>?<br><b>Why do</b> they <b>need</b> AI?</td></tr>
+</table></div></div>
 
 <div class="ez">المضارع البسيط مثل "الشيء اللي يصير دائماً". مثل: "الشمس تطلع كل يوم" ← The sun rises every day. لاحظ rises فيها s لأن the sun = it.<br><br>
 <b>حيلة سهلة:</b><br>
@@ -264,6 +274,18 @@ Errors <b>are detected</b> by the system. ← الأخطاء تُكتشف بوا
 <b>is + التصريف الثالث</b> ← للمفرد (Data <b>is stored</b>)<br>
 <b>are + التصريف الثالث</b> ← للجمع (Updates <b>are installed</b>)</div>
 
+<div class="cb g"><div class="lb gr">✏️ أمثلة إضافية - More Passive Examples</div>
+<div class="tw"><table>
+<tr><th>Singular (مفرد) → is + V3</th><th>Plural (جمع) → are + V3</th></tr>
+<tr><td class="en">Data <b>is stored</b> in the cloud.</td><td class="en">Files <b>are stored</b> in the cloud.</td></tr>
+<tr><td class="en">The update <b>is installed</b> automatically.</td><td class="en">Updates <b>are installed</b> automatically.</td></tr>
+<tr><td class="en">The error <b>is detected</b> by the system.</td><td class="en">Errors <b>are detected</b> by the system.</td></tr>
+<tr><td class="en">The issue <b>is fixed</b> by the technician.</td><td class="en">Problems <b>are fixed</b> quickly.</td></tr>
+<tr><td class="en">The device <b>is connected</b> to Wi-Fi.</td><td class="en">Devices <b>are connected</b> to the hub.</td></tr>
+<tr><td class="en">The app <b>is downloaded</b> from the store.</td><td class="en">Apps <b>are downloaded</b> from the store.</td></tr>
+<tr><td class="en">The password <b>is encrypted</b>.</td><td class="en">Passwords <b>are encrypted</b> for security.</td></tr>
+</table></div></div>
+
 <div class="cb g"><div class="lb gr">✏️ تمارين محلولة - حوّل من Active إلى Passive</div>
 <div class="en"><b>1.</b> The system processes the data. → <span class="hl3">The data is processed by the system.</span></div>
 <div style="color:#94a3b8;font-size:.78rem">data مفرد ← is + processed (التصريف الثالث لـ process)</div>
@@ -360,6 +382,24 @@ sections.m4=`<div class="card">
 a <b>compact</b> model ✅ ← صح (الصفة قبل الاسم)<br>
 a model <b>compact</b> ❌ ← خطأ! (في العربي الصفة بعد الاسم، لكن في الإنجليزي العكس!)</small></div>
 <div class="ez">في العربي نقول "جهاز صغير" (الاسم أولاً ثم الصفة). لكن في الإنجليزي العكس: "small device" (الصفة أولاً ثم الاسم). <b>دائماً الصفة قبل الاسم في الإنجليزي!</b></div>
+
+<div class="cb g"><div class="lb gr">✏️ أمثلة - Adjectives Before Nouns</div>
+<div class="tw"><table>
+<tr><th>✅ Correct (adjective + noun)</th><th>❌ Wrong</th></tr>
+<tr><td class="en">a <b>compact</b> model</td><td class="en">a model compact ❌</td></tr>
+<tr><td class="en">a <b>durable</b> material</td><td class="en">a material durable ❌</td></tr>
+<tr><td class="en">a <b>portable</b> device</td><td class="en">a device portable ❌</td></tr>
+<tr><td class="en">an <b>efficient</b> system</td><td class="en">a system efficient ❌</td></tr>
+<tr><td class="en">a <b>reliable</b> platform</td><td class="en">a platform reliable ❌</td></tr>
+<tr><td class="en">a <b>lightweight</b> wearable</td><td class="en">a wearable lightweight ❌</td></tr>
+</table></div>
+<b>Descriptive Phrases (بعد الاسم):</b><br>
+<div class="en">• a device <b>designed for</b> daily use<br>
+• a system <b>equipped with</b> sensors<br>
+• a model <b>compatible with</b> smartphones<br>
+• a platform <b>suitable for</b> students<br>
+• a product <b>available in</b> different sizes</div>
+</div>
 
 <div class="cb g"><div class="lb gr">✏️ تمارين محلولة</div>
 <div class="en"><b>1.</b> Choose: A) model compact B) <span class="hl3">compact model ✅</span> C) compactly model</div>
@@ -524,6 +564,29 @@ Open the application. ← افتح التطبيق<br>
 Follow the instructions. ← اتبع التعليمات</small></div>
 <div class="ez">صيغة الأمر = ابدأ بالفعل مباشرة بدون فاعل! بدل ما تقول "You should download" ← قل فقط "Download!" وهذا اللي نستخدمه في التعليمات والخطوات: "First, <b>open</b> the app. Next, <b>click</b> login. Then, <b>enter</b> your password."</div>
 
+<div class="cb g"><div class="lb gr">✏️ أمثلة شاملة - Imperative Examples</div>
+<div class="en"><b>Simple Imperatives (أوامر بسيطة):</b><br>
+• <b>Download</b> the file from the website.<br>
+• <b>Open</b> the application.<br>
+• <b>Click</b> the login button.<br>
+• <b>Enter</b> your username and password.<br>
+• <b>Connect</b> your device to Wi-Fi.<br>
+• <b>Install</b> the latest update.<br>
+• <b>Restart</b> the system after installation.<br>
+• <b>Upload</b> your assignment before the deadline.<br><br>
+<b>With Sequencing Words (مع كلمات الترتيب):</b><br>
+• <b>First</b>, open the official website.<br>
+• <b>Next</b>, download the installation file.<br>
+• <b>Then</b>, follow the on-screen instructions.<br>
+• <b>After that</b>, activate the software.<br>
+• <b>Finally</b>, restart the device.</div>
+<div class="en" style="margin-top:.4rem"><b>Passive Voice for Processes (المبني للمجهول في العمليات):</b><br>
+• The file <b>is uploaded</b> to the server.<br>
+• The system <b>is activated</b> automatically.<br>
+• The task <b>is completed</b> successfully.<br>
+• The assignment <b>is submitted</b> online.</div>
+</div>
+
 <h3>📖 قطعة القراءة - Installing Software</h3>
 <div class="enb"><div class="et">📖 Following Instructions</div>
 Installing a software application usually involves several clear steps. <b>First</b>, users download the application from an official website. <b>Next</b>, they open the installation file and follow the on-screen instructions. <b>After</b> the installation is complete, users activate the software using an account or license key. <b>Finally</b>, the system checks the configuration to make sure the application works correctly.</div>
@@ -595,6 +658,18 @@ sections.rev=`<div class="card">
 <tr><td>WH-Question</td><td class="en">What <b>does</b> AI <b>generate</b>?</td><td class="en">Why <b>do</b> students <b>use</b>?</td></tr>
 </table></div>
 
+<div class="cb g"><div class="lb gr">✏️ More Sentence Examples</div>
+<div class="en">
+1. The chatbot <b>answers</b> questions quickly. (it → +s)<br>
+2. AI <b>doesn't make</b> perfect decisions. (negative: doesn't + base)<br>
+3. <b>Does</b> the app <b>recognize</b> voices? Yes, it does. (question: Does + base)<br>
+4. Students <b>write</b> prompts every day. (they → no s)<br>
+5. We <b>don't use</b> AI for cooking. (negative: don't + base)<br>
+6. <b>Do</b> teachers <b>use</b> AI platforms? Yes, they do.<br>
+7. <b>What does</b> the system <b>produce</b>? It produces reports.<br>
+8. <b>How do</b> students <b>learn</b> with AI? They use chatbots.
+</div></div>
+
 <h3>2️⃣ Passive Voice</h3>
 <div class="cb"><div class="lb bl">Rules (القواعد)</div>
 <div class="en">
@@ -641,6 +716,18 @@ sections.rev=`<div class="card">
 <div class="ez">في الإنجليزي: الصفة <b>قبل</b> الاسم (compact model). في العربي العكس (موديل صغير).<br>
 لكن العبارات الوصفية (designed for, equipped with) تجي <b>بعد</b> الاسم.</div>
 
+<div class="cb g"><div class="lb gr">✏️ Full Sentence Examples</div>
+<div class="en">
+1. This is a <b>compact</b> and <b>portable</b> model. ✅ (adjectives before noun)<br>
+2. The device is made of <b>durable</b> materials. ✅<br>
+3. It is an <b>efficient</b> and <b>reliable</b> system. ✅<br>
+4. The system is <b>designed for</b> professional use. ✅ (phrase after noun)<br>
+5. The device is <b>equipped with</b> advanced sensors. ✅<br>
+6. This model is <b>compatible with</b> most smartphones. ✅<br>
+7. The platform is <b>suitable for</b> students and teachers. ✅<br>
+8. The product is <b>available in</b> three different sizes. ✅
+</div></div>
+
 <h3>4️⃣ Comparatives & Superlatives</h3>
 <div class="cb"><div class="lb bl">Rules (القواعد)</div>
 <div class="en">
@@ -653,6 +740,22 @@ sections.rev=`<div class="card">
 </div></div>
 <div class="ez">مقارنة بين 2 ← -er than (أو more...than للصفات الطويلة)<br>
 تفضيل بين 3+ ← the -est (أو the most للصفات الطويلة)</div>
+
+<div class="cb g"><div class="lb gr">✏️ أمثلة شاملة - Comparative & Superlative Examples</div>
+<div class="en"><b>Comparatives (بين شيئين):</b><br>
+• Device A is <b>faster than</b> Device B.<br>
+• Device B is <b>heavier than</b> Device A.<br>
+• Laptop X is <b>more expensive than</b> Laptop Y.<br>
+• This app is <b>more powerful than</b> that one.<br>
+• Device A charges <b>more quickly than</b> Device B.<br>
+• Battery life is <b>longer than</b> expected.<br><br>
+<b>Superlatives (بين 3 أو أكثر):</b><br>
+• Device C has <b>the longest</b> battery life.<br>
+• This is <b>the fastest</b> model available.<br>
+• It is <b>the cheapest</b> option for students.<br>
+• This is <b>the most expensive</b> device in the store.<br>
+• It has <b>the most powerful</b> processor.</div>
+</div>
 
 <div class="tw"><table>
 <tr><th>Adjective</th><th>Comparative (2 things)</th><th>Superlative (3+ things)</th></tr>
@@ -682,6 +785,22 @@ sections.rev=`<div class="card">
 </div></div>
 <div class="ez">صيغة الأمر = ابدأ بالفعل مباشرة! بدون فاعل. "حمّل الملف" = Download the file.<br>
 واستخدم كلمات الترتيب (First, Next, Then, After that, Finally) عشان توضح الخطوات.</div>
+
+<div class="cb g"><div class="lb gr">✏️ Complete Process Example</div>
+<div class="en">
+<b>How to submit an online assignment:</b><br>
+1. <b>First</b>, <b>log into</b> the learning platform.<br>
+2. <b>Next</b>, <b>select</b> the correct course.<br>
+3. <b>Then</b>, <b>open</b> the assignment page.<br>
+4. <b>After that</b>, <b>upload</b> the required file.<br>
+5. <b>Finally</b>, <b>click</b> the submit button and <b>wait</b> for confirmation.<br><br>
+<b>Passive version of the same process:</b><br>
+1. The platform <b>is accessed</b> using a username and password.<br>
+2. The correct course <b>is selected</b>.<br>
+3. The file <b>is uploaded</b> to the assignment page.<br>
+4. The assignment <b>is submitted</b> online.<br>
+5. A confirmation message <b>is displayed</b> on the screen.
+</div></div>
 
 <h3 style="color:#34d399">━━━ PART 2: ALL VOCABULARY (English Only) ━━━</h3>
 
@@ -783,20 +902,121 @@ sections.rev=`<div class="card">
 </table></div>
 
 <h3 style="color:#fb923c">━━━ PART 3: QUICK RULES SUMMARY ━━━</h3>
-<div class="warn"><div class="wt">⚠️ أهم القواعد للاختبار - Quick Rules</div>
+<div class="warn"><div class="wt">⚠️ أهم القواعد للاختبار - Quick Rules with Examples</div>
 <div class="en">
-<b>1. Present Simple + s:</b> He/She/It + verb<b>s</b> → AI generate<b>s</b><br>
-<b>2. Negative:</b> doesn't/don't + base verb (NO s!) → AI doesn't generate<br>
-<b>3. Question:</b> Does/Do + base verb (NO s!) → Does AI generate?<br>
-<b>4. Passive:</b> is/are + past participle → Data is stored / Files are stored<br>
-<b>5. Adjective:</b> Before noun → compact model (NOT model compact)<br>
-<b>6. Comparative:</b> -er than / more...than → faster than / more expensive than<br>
-<b>7. Superlative:</b> the -est / the most → the fastest / the most expensive<br>
-<b>8. Imperative:</b> Start with verb → Download the file!<br>
-<b>9. Sequencing:</b> First → Next → Then → After that → Finally<br>
-<b>10. Descriptive phrases:</b> After noun → designed for / equipped with / compatible with
+<b>1. Present Simple + s:</b> He/She/It + verb<b>s</b><br>
+→ AI generate<b>s</b> answers. | The system use<b>s</b> data. | The app recognize<b>s</b> faces.<br><br>
+<b>2. Negative:</b> doesn't/don't + base verb (NO s!)<br>
+→ AI <b>doesn't generate</b> perfect text. | Students <b>don't use</b> AI for cooking.<br><br>
+<b>3. Question:</b> Does/Do + base verb (NO s!)<br>
+→ <b>Does</b> AI <b>help</b>? | <b>Do</b> students <b>use</b> apps? | What <b>does</b> it <b>produce</b>?<br><br>
+<b>4. Passive:</b> is/are + past participle<br>
+→ Data <b>is stored</b>. | Files <b>are uploaded</b>. | Updates <b>are installed</b>. | The issue <b>is fixed</b>.<br><br>
+<b>5. Adjective BEFORE noun:</b><br>
+→ a <b>compact</b> model ✅ | a <b>durable</b> material ✅ | a model compact ❌<br><br>
+<b>6. Descriptive phrase AFTER noun:</b><br>
+→ a device <b>designed for</b> daily use | a system <b>equipped with</b> sensors<br><br>
+<b>7. Comparative:</b> -er than / more...than (2 things)<br>
+→ Device A is <b>faster than</b> B. | Laptop X is <b>more expensive than</b> Y.<br><br>
+<b>8. Superlative:</b> the -est / the most (3+ things)<br>
+→ This is <b>the fastest</b> model. | It is <b>the most powerful</b> processor.<br><br>
+<b>9. Imperative:</b> Start with base verb<br>
+→ <b>Download</b> the file. | <b>Open</b> the app. | <b>Connect</b> to Wi-Fi.<br><br>
+<b>10. Sequencing:</b> First → Next → Then → After that → Finally<br>
+→ <b>First</b>, download the app. <b>Next</b>, open it. <b>Then</b>, log in. <b>Finally</b>, restart.
 </b></div></div>
 </div>`;
+
+// ═══════════════════════════════════
+//     INSTRUCTOR'S REVIEW QUIZ
+// ═══════════════════════════════════
+const RQ=[
+{q:"The plural form of 'device':",o:["devices","device","devoious"],c:0,e:"جمع device = devices (نضيف s). قاعدة: أغلب الأسماء نضيف لها s للجمع"},
+{q:"You need to activate your ………",o:["account","sensor","password"],c:0,e:"activate your account = تفعّل حسابك. Account = حساب (مثل حساب بنكي أو حساب تطبيق)"},
+{q:"Teachers use ……… to check homework.",o:["office","payment","artificial intelligence"],c:2,e:"المعلمون يستخدمون الذكاء الاصطناعي لتصحيح الواجبات تلقائياً"},
+{q:"The singular form of 'children':",o:["Children","Child","Childs"],c:1,e:"children جمع شاذ (irregular plural). المفرد = child وليس childs!"},
+{q:"Please upload your ….",o:["website","password","file"],c:2,e:"upload your file = ارفع ملفك. Upload = رفع ملف على الإنترنت"},
+{q:"Robot means:",o:["What the AI produces","Related to electronic technology","A machine that can do tasks"],c:2,e:"Robot = آلة تؤدي مهام. الخيار A = تعريف Output، الخيار B = تعريف Digital"},
+{q:'The opposite of "increase" is:',o:["Average","Percentage","Decrease"],c:2,e:"عكس increase (يزداد) = decrease (ينخفض). Average = متوسط، Percentage = نسبة مئوية"},
+{q:"They ………… in a factory.",o:["works","work","working"],c:1,e:"They = جمع ← الفعل بدون s. They work ✅ (وليس works لأن works مع he/she/it فقط)"},
+{q:"If you see a fake website, you should ……… it.",o:["print","download","report"],c:2,e:"إذا شفت موقع مزيف = بلّغ عنه (report). لا تحمّله ولا تطبعه!"},
+{q:"First, open a bank…….",o:["account","password","risk"],c:0,e:"أولاً افتح حساب بنكي = bank account"},
+{q:"One _______ is lower cost.",o:["advantage","previous","colour"],c:0,e:"one advantage is lower cost = ميزة واحدة هي التكلفة الأقل. Advantage = ميزة/فائدة"},
+{q:"This is ………. computer.",o:["an","a","none"],c:1,e:"computer تبدأ بحرف ساكن (c) ← نستخدم a. نستخدم an فقط قبل حروف العلة (a,e,i,o,u)"},
+{q:"The doctor works in……",o:["a hospital","a library","a plane"],c:0,e:"الدكتور يشتغل في مستشفى = hospital. Library = مكتبة، Plane = طائرة"},
+{q:"Our ……… works on a new project together.",o:["contract","team","schedule"],c:1,e:"فريقنا يعمل على مشروع جديد معاً = team. Contract = عقد، Schedule = جدول"},
+{q:"….. they in the computer lab?",o:["Is","am","Are"],c:2,e:"they ← Are. قاعدة: Is مع he/she/it | Am مع I | Are مع you/we/they"},
+{q:"They ………. from this class.",o:["aren't","isn't","don't"],c:0,e:"They + aren't (= are not). يُستخدم aren't مع they/we/you في نفي verb to be"},
+{q:"I ………. an AI student.",o:["am","are","is"],c:0,e:"I ← am دائماً. I am = أنا. لا نستخدم is أو are مع I أبداً"},
+{q:"The machine _______ fast.",o:["work","works","working"],c:1,e:"The machine = it ← نضيف s للفعل: works. قاعدة Present Simple مع المفرد"},
+{q:"Choose the correct question:",o:["Does the computer saves your work?","Does the computer save your work?","Do the computer save your work?"],c:1,e:"computer = it ← Does + base verb (بدون s!). Does...save ✅ وليس saves لأن Does أخذت الـ s"},
+{q:"The computer cable is ________ the table.",o:["on","at","between"],c:0,e:"الكيبل على الطاولة = on the table. On = على سطح شيء"},
+{q:"The ……….. usually makes good products.",o:["company","speed","account"],c:0,e:"الشركة تصنع منتجات جيدة = company. Speed = سرعة، Account = حساب"},
+{q:"He……. a student.",o:["am","is","are"],c:1,e:"He ← is. قاعدة: He/She/It + is | I + am | You/We/They + are"},
+{q:"Artificial Intelligence sometimes makes……",o:["money","mistakes","videos"],c:1,e:"AI يخطئ أحياناً = makes mistakes. من المنهج: 'AI can misunderstand prompts or generate incorrect information'"},
+{q:"The app ______ multiple features.",o:["include","includes","including"],c:1,e:"The app = it ← includes (بـ s). Present Simple: المفرد يأخذ s"},
+{q:"She ………. in a bank.",o:["works","work","working"],c:0,e:"She = مفرد ← works (بـ s). She works in a bank = هي تعمل في بنك"},
+{q:"The employee works in a big technical ______.",o:["company","helmet","App"],c:0,e:"الموظف يعمل في شركة تقنية كبيرة = company. Helmet = خوذة"},
+{q:"The singular form of 'men':",o:["men","man","mans"],c:1,e:"men جمع شاذ (irregular). المفرد = man (وليس mans!). مثل: child/children, woman/women"},
+{q:"To avoid………, don't open unknown websites.",o:["office","risk","app"],c:1,e:"لتجنب المخاطر = to avoid risk. لا تفتح مواقع مجهولة عشان تتجنب المخاطر"},
+{q:"______ helps machines learn and solve problems.",o:["Artificial Intelligence (AI)","Report","file"],c:0,e:"الذكاء الاصطناعي يساعد الآلات تتعلم وتحل مشاكل = AI"},
+{q:"The ……….. reset procedure includes three stages.",o:["submit","password","connect"],c:1,e:"إجراء إعادة تعيين كلمة المرور يشمل 3 مراحل = password reset procedure"},
+{q:"______ offices in the building.",o:["There is","There are","There no"],c:1,e:"offices = جمع ← There are. قاعدة: There is + مفرد | There are + جمع"},
+{q:"I have a ……….. at 7 o'clock.",o:["Budget","Meeting","File"],c:1,e:"عندي اجتماع الساعة 7 = meeting. Budget = ميزانية"},
+{q:"…….., install the application before restarting the system.",o:["Finally","First","After that"],c:1,e:"أولاً ثبّت التطبيق = First. المنطق: التثبيت يكون أولاً قبل إعادة التشغيل"},
+{q:"This team always shows ______ by creating new ideas.",o:["routine","innovation","profit"],c:1,e:"الفريق يظهر ابتكاراً بإنشاء أفكار جديدة = innovation. Routine = روتين، Profit = ربح"},
+{q:"You can upload your ______.",o:["Website","File","password"],c:1,e:"تقدر ترفع ملفك = upload your file"},
+{q:"______ a hospital in this street.",o:["There is","There are","There am"],c:0,e:"hospital = مفرد ← There is. يوجد مستشفى في هذا الشارع"},
+{q:"People use ……… to share photos and news.",o:["factory","office","social media"],c:2,e:"الناس تستخدم وسائل التواصل الاجتماعي لمشاركة الصور والأخبار = social media"},
+{q:"He ______ a doctor.",o:["is","are","am"],c:0,e:"He ← is. هو دكتور = He is a doctor"},
+{q:"The plural form of 'box':",o:["box","boxes","boxs"],c:1,e:"جمع box = boxes (نضيف es للكلمات المنتهية بـ x, s, sh, ch). وليس boxs!"},
+{q:"Our ……… works on a new project together.",o:["contract","team","schedule"],c:1,e:"فريقنا يعمل على مشروع جديد = team"},
+];
+
+sections.rq=`<div class="card">
+<h2 style="color:#a78bfa">👩‍🏫 Instructor's Review Questions</h2>
+<h2 style="color:#94a3b8;font-size:.85rem">أسئلة مراجعة استاذة المادة - 40 سؤال</h2>
+<div class="sb"><div class="sn2" id="rqScore">0 / `+RQ.length+`</div><button class="rb" onclick="resetRQ()">🔄 Reset</button></div>
+<div id="rqContainer"></div>
+</div>`;
+
+let rqAnswers={};
+function initRQ(){
+rqAnswers={};
+const c=document.getElementById('rqContainer');
+if(!c)return;
+c.innerHTML='';
+RQ.forEach((q,i)=>{
+const d=document.createElement('div');d.className='qc';
+d.innerHTML='<h4>Q'+(i+1)+': '+q.q+'</h4><div id="rqopts'+i+'">'+
+q.o.map((o,j)=>'<div class="qo" onclick="checkRQ('+i+','+j+')" id="rqo'+i+'_'+j+'">'+String.fromCharCode(65+j)+') '+o+'</div>').join('')+
+'</div><div class="qe" id="rqexp'+i+'">'+q.e+'</div>';
+c.appendChild(d);
+});
+updateRQScore();
+}
+window.checkRQ=function(qi,oi){
+if(rqAnswers[qi]!==undefined)return;
+rqAnswers[qi]=oi;
+const correct=RQ[qi].c;
+const exp=document.getElementById('rqexp'+qi);
+document.querySelectorAll('#rqopts'+qi+' .qo').forEach(o=>o.classList.add('d'));
+if(oi===correct){
+document.getElementById('rqo'+qi+'_'+oi).classList.add('ok');
+exp.className='qe s ok';exp.innerHTML='✅ '+RQ[qi].e;
+}else{
+document.getElementById('rqo'+qi+'_'+oi).classList.add('no');
+document.getElementById('rqo'+qi+'_'+correct).classList.add('ok');
+exp.className='qe s no';exp.innerHTML='❌ الإجابة الصحيحة: '+String.fromCharCode(65+correct)+') '+RQ[qi].o[correct]+'<br>'+RQ[qi].e;
+}
+updateRQScore();
+};
+function updateRQScore(){
+const s=Object.entries(rqAnswers).filter(([k,v])=>v===RQ[k].c).length;
+const el=document.getElementById('rqScore');
+if(el)el.textContent=s+' / '+RQ.length;
+}
+window.resetRQ=function(){rqAnswers={};initRQ();window.scrollTo({top:0,behavior:'smooth'});};
 
 // ═══════════════════════════════════
 //     QUIZ - 50 Questions

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ELG 201 - Applied English - ملخص شامل</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#0a0f1a;color:#e2e8f0;font-family:system-ui,sans-serif;line-height:1.8}
+::-webkit-scrollbar{height:4px;width:4px}::-webkit-scrollbar-thumb{background:#334155;border-radius:4px}
+.hdr{background:linear-gradient(135deg,#1a3a2f,#0a0f1a 50%,#1a1a3a);padding:1.5rem;text-align:center;border-bottom:2px solid #2d4a3c}
+.hdr h1{font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,#34d399,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hdr p{color:#94a3b8;font-size:.82rem;margin-top:.3rem}
+.tabs{display:flex;overflow-x:auto;background:#111827;border-bottom:2px solid #1f2937;position:sticky;top:0;z-index:100}
+.tab{flex:none;padding:.55rem .7rem;font-size:.68rem;font-weight:700;color:#64748b;background:none;border:none;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;transition:.3s}
+.tab.on{color:#34d399;border-bottom-color:#34d399;background:rgba(52,211,153,.08)}
+.wrap{max-width:880px;margin:0 auto;padding:1rem}
+.sec{display:none}.sec.on{display:block}
+.card{background:#111827;border:1px solid #1f2937;border-radius:12px;padding:1.2rem;margin-bottom:1rem}
+h2{font-size:1.05rem;font-weight:800;margin-bottom:.7rem}
+h3{font-size:.92rem;font-weight:700;color:#a78bfa;margin:1.1rem 0 .4rem}
+.cb{border-right:4px solid #38bdf8;background:rgba(56,189,248,.04);padding:.7rem;border-radius:0 8px 8px 0;margin:.5rem 0;font-size:.84rem}
+.cb.g{border-right-color:#34d399;background:rgba(52,211,153,.04)}
+.cb.o{border-right-color:#fb923c;background:rgba(251,146,60,.04)}
+.cb.y{border-right-color:#fbbf24;background:rgba(251,191,36,.04)}
+.lb{font-weight:700;margin-bottom:.2rem;font-size:.88rem}
+.lb.bl{color:#38bdf8}.lb.gr{color:#34d399}.lb.or{color:#fb923c}.lb.yl{color:#fbbf24}
+.fm{background:rgba(167,139,250,.07);border:1px solid rgba(167,139,250,.2);border-radius:8px;padding:.6rem;margin:.5rem 0;text-align:center;font-weight:700;font-size:.95rem;direction:ltr;color:#c4b5fd}
+.fm small{display:block;font-size:.75rem;color:#94a3b8;font-weight:400;margin-top:.2rem}
+.warn{border-right:4px solid #fb923c;background:rgba(251,146,60,.05);padding:.7rem;border-radius:0 8px 8px 0;margin:.5rem 0;font-size:.82rem}
+.warn .wt{color:#fb923c;font-weight:700;margin-bottom:.2rem}
+.tip{border:1px dashed rgba(251,191,36,.4);background:rgba(251,191,36,.04);border-radius:8px;padding:.5rem;margin:.5rem 0;font-size:.82rem}
+.tip::before{content:'💡 '}
+.ez{background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.18);border-radius:10px;padding:.6rem;margin:.5rem 0;font-size:.82rem;line-height:1.8}
+.ez::before{content:'🎯 بالبلدي:';display:block;color:#34d399;font-weight:800;font-size:.8rem;margin-bottom:.2rem}
+.tw{overflow-x:auto;margin:.5rem 0}
+table{width:100%;border-collapse:collapse;font-size:.78rem}
+th{background:rgba(52,211,153,.1);color:#34d399;font-weight:700;padding:.4rem;border:1px solid #1f2937}
+td{padding:.35rem .4rem;border:1px solid #1f2937}
+.en{direction:ltr;text-align:left;font-family:'Segoe UI',sans-serif}
+.enb{background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:.7rem;margin:.5rem 0;direction:ltr;text-align:left;font-size:.84rem;color:#c9d1d9;line-height:1.9}
+.enb .et{color:#34d399;font-weight:700;font-size:.78rem;margin-bottom:.3rem;display:block}
+.vw{display:grid;grid-template-columns:1fr 1fr;gap:.3rem;margin:.4rem 0;font-size:.8rem}
+.vi{background:rgba(56,189,248,.04);border:1px solid #1f2937;border-radius:6px;padding:.4rem .5rem}
+.vi b{color:#38bdf8}.vi .ar{color:#94a3b8;font-size:.75rem}
+.qc{background:#111827;border:1px solid #1f2937;border-radius:10px;padding:.8rem;margin-bottom:.6rem}
+.qc h4{color:#38bdf8;font-weight:700;font-size:.82rem;margin-bottom:.4rem;direction:ltr;text-align:left}
+.qo{padding:.4rem .6rem;border:1px solid #1f2937;border-radius:8px;margin-bottom:.25rem;font-size:.8rem;cursor:pointer;transition:.2s;direction:ltr;text-align:left}
+.qo:hover:not(.d){border-color:#34d399;background:rgba(52,211,153,.05)}
+.qo.ok{border-color:#22c55e;background:rgba(34,197,94,.08);color:#34d399}
+.qo.no{border-color:#ef4444;background:rgba(239,68,68,.08);color:#fca5a5}
+.qo.d{cursor:default}
+.qe{margin-top:.3rem;padding:.4rem;border-radius:6px;font-size:.76rem;display:none}
+.qe.s{display:block}
+.qe.ok{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.15);color:#34d399}
+.qe.no{background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.15);color:#fca5a5}
+.sb{background:#111827;border:1px solid #1f2937;border-radius:10px;padding:.7rem;text-align:center;margin-bottom:.7rem}
+.sb .sn2{font-size:1.8rem;font-weight:900;background:linear-gradient(135deg,#fbbf24,#fb923c);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.rb{display:block;margin:.4rem auto;padding:.35rem 1.2rem;background:rgba(239,68,68,.12);color:#ef4444;border:1px solid rgba(239,68,68,.25);border-radius:8px;cursor:pointer;font-weight:700;font-size:.78rem}
+.hl{color:#38bdf8;font-weight:700}.hl2{color:#a78bfa;font-weight:700}.hl3{color:#34d399;font-weight:700}
+</style>
+</head>
+<body>
+<div class="hdr">
+<h1>📚 ELG 201 - Applied English - ملخص شامل</h1>
+<p>160 صفحة → 5 وحدات | قواعد بالعربي | مفردات EN-EN + EN-AR | قطع قراءة | اختبار ذاتي</p>
+</div>
+<div class="tabs" id="tabs"></div>
+<div class="wrap" id="content"></div>
+
+<script>
+const tabs=[
+{id:'m2',icon:'🤖',label:'Module 2: AI + Present Simple'},
+{id:'m3',icon:'💻',label:'Module 3: Technical + Passive'},
+{id:'m4',icon:'📝',label:'Module 4: Descriptions'},
+{id:'m5',icon:'⚖️',label:'Module 5: Comparisons'},
+{id:'m6',icon:'📋',label:'Module 6: Instructions'},
+{id:'quiz',icon:'✅',label:'Quiz (50 Q)'}
+];
+let currentTab='m2';
+const tabsEl=document.getElementById('tabs');
+tabs.forEach(t=>{const b=document.createElement('button');b.className='tab'+(t.id===currentTab?' on':'');b.textContent=t.icon+' '+t.label;b.onclick=()=>{currentTab=t.id;document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));b.classList.add('on');render();window.scrollTo({top:0,behavior:'smooth'})};b.id='tab-'+t.id;tabsEl.appendChild(b)});
+function render(){document.getElementById('content').innerHTML=sections[currentTab]||'';if(currentTab==='quiz')initQuiz();}
+
+const sections={};
+
+// ═══════════════════════════════════
+//     MODULE 2: AI & Present Simple
+// ═══════════════════════════════════
+sections.m2=`<div class="card">
+<h2 style="color:#34d399">🤖 Module 2: Generative AI + Present Simple</h2>
+
+<h3>📖 المفردات - Vocabulary</h3>
+<div class="cb y"><div class="lb yl">طريقة حفظ المفردات: اقرأ المعنى بالإنجليزي أولاً (English-English) ثم الترجمة العربية</div>
+لماذا؟ لأن الاختبار بالإنجليزي! إذا حفظت المعنى بالإنجليزي مباشرة ستفهم السؤال أسرع.</div>
+
+<div class="tw"><table>
+<tr><th>Word</th><th>English Meaning</th><th>المعنى بالعربي</th><th>Example</th></tr>
+<tr><td><b>Robot</b></td><td>A machine that can do tasks</td><td>آلة تؤدي مهام</td><td class="en">The robot cleans the floor.</td></tr>
+<tr><td><b>App</b></td><td>A small software program</td><td>تطبيق (برنامج صغير)</td><td class="en">This app helps me study.</td></tr>
+<tr><td><b>Smart device</b></td><td>An electronic device connected to the internet</td><td>جهاز ذكي</td><td class="en">My smart device recognizes my voice.</td></tr>
+<tr><td><b>Chatbot</b></td><td>A computer program that talks to users</td><td>برنامج محادثة آلي</td><td class="en">The chatbot answers questions.</td></tr>
+<tr><td><b>Data</b></td><td>Information in numbers or text</td><td>بيانات (معلومات رقمية)</td><td class="en">The system uses data to learn.</td></tr>
+<tr><td><b>Program</b></td><td>A set of instructions for a computer</td><td>برنامج حاسوبي</td><td class="en">This program runs fast.</td></tr>
+<tr><td><b>System</b></td><td>A group of parts working together</td><td>نظام</td><td class="en">The system processes data.</td></tr>
+<tr><td><b>Tool</b></td><td>Something used to do a job</td><td>أداة</td><td class="en">AI is a useful tool.</td></tr>
+<tr><td><b>Generate</b></td><td>To create something new</td><td>يُنشئ / يُولّد</td><td class="en">The AI generates a summary.</td></tr>
+<tr><td><b>Prompt</b></td><td>A message typed by the user to AI</td><td>أمر / طلب يُكتب للذكاء الاصطناعي</td><td class="en">Write a clear prompt.</td></tr>
+<tr><td><b>Output</b></td><td>What the AI produces as a result</td><td>المخرجات / النتيجة</td><td class="en">The output is a short text.</td></tr>
+<tr><td><b>Recognize</b></td><td>To identify or know something</td><td>يتعرّف على</td><td class="en">The app recognizes my face.</td></tr>
+<tr><td><b>Identify</b></td><td>To find out what something is</td><td>يُحدد / يتعرف</td><td class="en">AI can identify errors.</td></tr>
+<tr><td><b>Digital</b></td><td>Related to electronic technology</td><td>رقمي / إلكتروني</td><td class="en">We live in a digital world.</td></tr>
+</table></div>
+<div class="ez">الـ Prompt مثل لما تكتب طلب في ChatGPT ← هذا هو الـ prompt. والـ Output هو الرد اللي يطلع لك. والـ Generate يعني "ينتج شيء جديد" مثل لما AI يكتب لك نص أو يرسم صورة.</div>
+
+<h3>📗 القواعد - Grammar: Present Simple المضارع البسيط</h3>
+<div class="cb"><div class="lb bl">🎯 متى نستخدمه؟ (بالعربي)</div>
+نستخدم المضارع البسيط لوصف:<br>
+1. <b>حقائق ثابتة:</b> AI generates answers. (الذكاء الاصطناعي يُنشئ إجابات)<br>
+2. <b>عمليات وأنظمة:</b> The system uses data. (النظام يستخدم بيانات)<br>
+3. <b>روتين يومي:</b> Students use apps every day. (الطلاب يستخدمون التطبيقات يومياً)</div>
+
+<div class="warn"><div class="wt">⚠️ القاعدة الذهبية</div>
+<b>مع he / she / it ← نضيف s أو es للفعل</b><br>
+<b>مع I / you / we / they ← الفعل يبقى كما هو</b></div>
+
+<div class="fm">Affirmative (الإثبات): Subject + verb (+s/es)<small>AI generate<b>s</b> answers. ← لاحظ الـ s لأن AI = it</small></div>
+<div class="fm">Negative (النفي): Subject + do/does not + base verb<small>AI does not replace teachers. ← does not لأن AI = it<br>Chatbots do not understand feelings. ← do not لأن Chatbots = they</small></div>
+<div class="fm">Yes/No Questions: Do/Does + subject + base verb?<small>Does AI help students? ← Yes, it does. / No, it doesn't.<br>Do chatbots answer questions? ← Yes, they do. / No, they don't.</small></div>
+<div class="fm">WH-Questions: WH-word + do/does + subject + base verb?<small>What does the model generate? ← ماذا ينتج النموذج؟<br>Why does AI recommend videos? ← لماذا يوصي AI بفيديوهات؟</small></div>
+
+<div class="ez">المضارع البسيط مثل "الشيء اللي يصير دائماً". مثل: "الشمس تطلع كل يوم" ← The sun rises every day. لاحظ rises فيها s لأن the sun = it.<br><br>
+<b>حيلة سهلة:</b><br>
+he/she/it ← أضف <b>s</b> (أو <b>es</b> إذا الفعل ينتهي بـ s, sh, ch, x, o)<br>
+I/you/we/they ← الفعل زي ما هو بدون أي إضافة<br><br>
+<b>النفي:</b> حط does not (أو doesn't) قبل الفعل مع he/she/it، وdo not (أو don't) مع الباقي. <b>والفعل يرجع بدون s!</b><br>
+AI generate<b>s</b> ← ✅ إثبات<br>
+AI <b>does not</b> generate ← ✅ نفي (بدون s!)</div>
+
+<h3>📖 قطعة القراءة 1 - Reading Passage 1</h3>
+<div class="enb"><div class="et">📖 Generative AI in Everyday Life</div>
+Generative AI is becoming a normal part of modern life. Many people use tools like ChatGPT or Google Gemini every day. Students can write a simple prompt and the AI generates a short explanation.<br><br>
+Translation apps help learners understand new words. Some apps summarize long texts and create easier versions. Creative apps allow users to generate images, short stories, or designs by typing a few words.<br><br>
+Music and video platforms use AI to recommend songs and clips based on preferences. Generative AI helps students by identifying writing problems, creating study plans, and answering questions. Although AI makes mistakes, it improves over time.</div>
+<div class="ez">القطعة تتكلم عن إن AI صار شيء عادي في حياتنا: الطلاب يكتبون prompt ويحصلون شرح، تطبيقات الترجمة تساعد في فهم كلمات جديدة، تطبيقات إبداعية تنشئ صور وقصص، ومنصات الموسيقى تستخدم AI لتوصية أغاني. AI يساعد الطلاب لكن <b>يخطئ أحياناً</b>.</div>
+
+<div class="cb g"><div class="lb gr">أسئلة الفهم - Comprehension (الإجابات بالعربي)</div>
+<div class="en" style="margin-bottom:.3rem"><b>1. Generative AI helps students by:</b> A) cooking food B) <span class="hl3">explaining ideas ✅</span> C) driving cars</div>
+<div style="color:#94a3b8;font-size:.78rem">الشرح: القطعة تقول AI يساعد الطلاب بتوضيح الأفكار وإنشاء خطط دراسية</div>
+<div class="en" style="margin-bottom:.3rem"><b>2. Creative apps can create:</b> A) animals B) <span class="hl3">designs and images ✅</span> C) food recipes only</div>
+<div style="color:#94a3b8;font-size:.78rem">الشرح: "Creative apps allow users to generate images, short stories, or designs"</div>
+<div class="en" style="margin-bottom:.3rem"><b>3. Translation apps help students with:</b> A) <span class="hl3">new words and sentences ✅</span> B) weather C) music</div>
+<div style="color:#94a3b8;font-size:.78rem">الشرح: "Translation apps help learners understand new words or sentences"</div>
+<div class="en" style="margin-bottom:.3rem"><b>4. AI sometimes makes:</b> A) money B) <span class="hl3">mistakes ✅</span> C) videos</div>
+<div style="color:#94a3b8;font-size:.78rem">الشرح: "Although AI makes mistakes" ← AI يخطئ أحياناً</div>
+<div class="en" style="margin-bottom:.3rem"><b>5. Music apps use AI to:</b> A) <span class="hl3">recommend songs ✅</span> B) cook meals C) clean files</div>
+<div style="color:#94a3b8;font-size:.78rem">الشرح: "Music platforms use AI to recommend songs and clips"</div>
+</div>
+
+<h3>📖 قطعة القراءة 2 - Reading Passage 2</h3>
+<div class="enb"><div class="et">📖 Generative AI at School and Work</div>
+Generative AI is an essential tool for students and workers. Students use AI models like ChatGPT to understand difficult ideas, request summaries, or get clear examples. AI writing tools check grammar and suggest better vocabulary.<br><br>
+Teachers use AI platforms to check homework automatically and to identify students who need extra support. In workplaces, AI writes simple emails, translates messages, and creates short reports. Chatbots answer common questions and guide customers.<br><br>
+AI can misunderstand prompts or generate incorrect information. Users must review AI output before using it. When used responsibly, generative AI improves learning and productivity.</div>
+
+<div class="cb g"><div class="lb gr">True or False (صح أو خطأ)</div>
+<div class="en"><b>1. Students use AI to understand difficult ideas.</b> → <span class="hl3">True ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">صح: "Students use AI models to understand difficult ideas"</div>
+<div class="en"><b>2. AI cannot check grammar.</b> → <span style="color:#ef4444">False ❌</span></div>
+<div style="color:#94a3b8;font-size:.78rem">خطأ: "AI writing tools check grammar" ← AI يقدر يتحقق من القواعد</div>
+<div class="en"><b>3. Teachers use AI to help identify students who need support.</b> → <span class="hl3">True ✅</span></div>
+<div class="en"><b>4. AI writes emails at work.</b> → <span class="hl3">True ✅</span></div>
+<div class="en"><b>5. AI is always correct.</b> → <span style="color:#ef4444">False ❌</span></div>
+<div style="color:#94a3b8;font-size:.78rem">خطأ: "AI can misunderstand prompts or generate incorrect information" ← AI يخطئ!</div>
+</div>
+</div>`;
+
+// ═══════════════════════════════════
+//     MODULE 3: Technical + Passive
+// ═══════════════════════════════════
+sections.m3=`<div class="card">
+<h2 style="color:#38bdf8">💻 Module 3: Technical Reading + Passive Voice</h2>
+
+<h3>📖 المفردات - Vocabulary</h3>
+<div class="tw"><table>
+<tr><th>Word</th><th>English Meaning</th><th>المعنى بالعربي</th><th>Example</th></tr>
+<tr><td><b>Device</b></td><td>A piece of electronic equipment</td><td>جهاز</td><td class="en">This device connects via Wi-Fi.</td></tr>
+<tr><td><b>System</b></td><td>A set of connected parts working together</td><td>نظام</td><td class="en">The system manages all devices.</td></tr>
+<tr><td><b>Feature</b></td><td>A special quality or ability</td><td>ميزة / خاصية</td><td class="en">The new feature improves storage.</td></tr>
+<tr><td><b>Storage</b></td><td>The space where data is kept (memory)</td><td>تخزين / مساحة التخزين</td><td class="en">Check your storage space.</td></tr>
+<tr><td><b>Update</b></td><td>A newer version of software</td><td>تحديث</td><td class="en">Install the latest update.</td></tr>
+<tr><td><b>Configure</b></td><td>To set up a device or system</td><td>يُهيئ / يُعدّ (الإعدادات)</td><td class="en">Configure your device before use.</td></tr>
+<tr><td><b>Interface</b></td><td>The screen/controls users interact with</td><td>واجهة المستخدم</td><td class="en">The interface is user-friendly.</td></tr>
+<tr><td><b>Function</b></td><td>What something does; its purpose</td><td>وظيفة</td><td class="en">The main function is data analysis.</td></tr>
+<tr><td><b>Version</b></td><td>A particular form of software (v1, v2...)</td><td>إصدار / نسخة</td><td class="en">Check the version after the update.</td></tr>
+<tr><td><b>Performance</b></td><td>How well something works</td><td>أداء</td><td class="en">The update improves performance.</td></tr>
+</table></div>
+<div class="ez">Configure = تظبط الإعدادات (مثل لما تشتري جوال جديد وتضبط اللغة والواي فاي). Interface = الشاشة اللي تتعامل معها (مثل شاشة الجوال). Version = النسخة (مثل iOS 17 ← هذا version). Performance = الأداء (سرعة الجهاز وقوته).</div>
+
+<h3>📗 القواعد - Grammar: Passive Voice المبني للمجهول</h3>
+<div class="cb"><div class="lb bl">🎯 متى نستخدمه؟ (بالعربي)</div>
+نستخدم المبني للمجهول عندما <b>الفاعل غير مهم أو غير معروف</b>، والمهم هو <b>الفعل نفسه أو المفعول به</b>.<br><br>
+<b>مثال:</b> "التحديثات تُثبّت تلقائياً" ← ما يهمنا مَن ثبّتها، المهم إنها تُثبّت.</div>
+
+<div class="fm">Passive Voice: Object + is/are + past participle (التصريف الثالث)<small>
+Updates <b>are installed</b> automatically. ← التحديثات تُثبّت تلقائياً<br>
+Data <b>is stored</b> in the cloud. ← البيانات تُخزّن في السحابة<br>
+Errors <b>are detected</b> by the system. ← الأخطاء تُكتشف بواسطة النظام</small></div>
+
+<div class="warn"><div class="wt">⚠️ القاعدة: كيف نحوّل من Active إلى Passive؟</div>
+<b>Active:</b> The system processes the data. ← النظام يعالج البيانات (فاعل + فعل + مفعول)<br>
+<b>Passive:</b> The data <b>is processed</b> (by the system). ← البيانات تُعالَج<br><br>
+<b>الخطوات:</b><br>
+1. المفعول به يصير في البداية (The data)<br>
+2. نضيف is/are حسب المفرد أو الجمع<br>
+3. نحول الفعل للتصريف الثالث (process → processed)<br>
+4. الفاعل نحطه بعد by (اختياري)</div>
+
+<div class="ez">المبني للمجهول = "الشيء انسوى لوحده!" بدل ما تقول "أحمد كسر الكأس" ← تقول "الكأس انكسر" (ما يهمك مين كسره).<br>
+<b>is + التصريف الثالث</b> ← للمفرد (Data <b>is stored</b>)<br>
+<b>are + التصريف الثالث</b> ← للجمع (Updates <b>are installed</b>)</div>
+
+<div class="cb g"><div class="lb gr">✏️ تمارين محلولة - حوّل من Active إلى Passive</div>
+<div class="en"><b>1.</b> The system processes the data. → <span class="hl3">The data is processed by the system.</span></div>
+<div style="color:#94a3b8;font-size:.78rem">data مفرد ← is + processed (التصريف الثالث لـ process)</div>
+<div class="en"><b>2.</b> The OS manages network settings. → <span class="hl3">Network settings are managed by the OS.</span></div>
+<div style="color:#94a3b8;font-size:.78rem">settings جمع ← are + managed</div>
+<div class="en"><b>3.</b> The app stores files in the cloud. → <span class="hl3">Files are stored in the cloud by the app.</span></div>
+<div class="en"><b>4.</b> The technician fixes the issue. → <span class="hl3">The issue is fixed by the technician.</span></div>
+</div>
+
+<h3>📖 قطعة القراءة - Smart Home Systems</h3>
+<div class="enb"><div class="et">📖 How Modern Smart Home Systems Operate</div>
+A smart home system integrates multiple devices to create a connected environment. The hub acts as the "brain" of the home. When a sensor detects motion, it sends a signal to the hub. The hub processes that information and sends commands to devices.<br><br>
+Smart thermostats track when family members are home and adjust temperatures. Smart plugs and meters record electricity usage. Remote access allows users to control their home from anywhere. All data is encrypted and stored securely in cloud servers.</div>
+
+<div class="cb g"><div class="lb gr">أسئلة الفهم - Comprehension</div>
+<div class="en"><b>1. The "brain" of the smart home is:</b> A) sensor B) <span class="hl3">central hub ✅</span> C) camera</div>
+<div style="color:#94a3b8;font-size:.78rem">"دماغ" البيت الذكي = الـ hub (المحور المركزي) اللي يتحكم بكل الأجهزة</div>
+<div class="en"><b>2. Smart thermostats help with:</b> A) entertainment B) <span class="hl3">temperature control ✅</span> C) door locking</div>
+<div style="color:#94a3b8;font-size:.78rem">الثيرموستات الذكي يتحكم بدرجة الحرارة</div>
+<div class="en"><b>3. Why are updates important?</b> A) Entertainment B) <span class="hl3">Fix security issues ✅</span> C) Change colors</div>
+<div style="color:#94a3b8;font-size:.78rem">التحديثات مهمة لأنها تصلح مشاكل الأمان وتحسّن الأداء</div>
+</div>
+</div>`;
+
+// ═══════════════════════════════════
+//     MODULE 4: Descriptions
+// ═══════════════════════════════════
+sections.m4=`<div class="card">
+<h2 style="color:#fb923c">📝 Module 4: Technical Descriptions + Adjectives</h2>
+
+<h3>📖 المفردات - Vocabulary</h3>
+<h3 style="color:#38bdf8;font-size:.85rem">Descriptive Nouns (أسماء وصفية)</h3>
+<div class="vw">
+<div class="vi"><b>Model</b> = a specific version of a product<div class="ar">طراز / موديل</div></div>
+<div class="vi"><b>Type</b> = a category or kind<div class="ar">نوع / صنف</div></div>
+<div class="vi"><b>Size</b> = how big or small something is<div class="ar">حجم</div></div>
+<div class="vi"><b>Weight</b> = how heavy something is<div class="ar">وزن</div></div>
+<div class="vi"><b>Material</b> = what something is made of<div class="ar">مادة (الخامة)</div></div>
+</div>
+
+<h3 style="color:#38bdf8;font-size:.85rem">Functional Verbs (أفعال وظيفية)</h3>
+<div class="vw">
+<div class="vi"><b>Include</b> = to contain as part<div class="ar">يتضمن / يشمل</div></div>
+<div class="vi"><b>Allow</b> = to let someone do something<div class="ar">يسمح</div></div>
+<div class="vi"><b>Support</b> = to help or work with<div class="ar">يدعم</div></div>
+<div class="vi"><b>Provide</b> = to give or offer<div class="ar">يوفّر / يقدّم</div></div>
+<div class="vi"><b>Operate</b> = to work or function<div class="ar">يعمل / يُشغّل</div></div>
+</div>
+
+<h3 style="color:#38bdf8;font-size:.85rem">Descriptive Phrases (عبارات وصفية) ⭐</h3>
+<div class="tw"><table>
+<tr><th>Phrase</th><th>English Meaning</th><th>المعنى بالعربي</th><th>Example</th></tr>
+<tr><td><b>designed for</b></td><td>created for a specific purpose</td><td>مصمم لـ</td><td class="en">designed for professional use</td></tr>
+<tr><td><b>suitable for</b></td><td>appropriate or good for</td><td>مناسب لـ</td><td class="en">suitable for daily tasks</td></tr>
+<tr><td><b>equipped with</b></td><td>has or contains</td><td>مجهّز بـ</td><td class="en">equipped with advanced features</td></tr>
+<tr><td><b>available in</b></td><td>can be found in (sizes, colors)</td><td>متوفر بـ</td><td class="en">available in different sizes</td></tr>
+<tr><td><b>compatible with</b></td><td>able to work with other devices</td><td>متوافق مع</td><td class="en">compatible with most smartphones</td></tr>
+</table></div>
+
+<h3 style="color:#38bdf8;font-size:.85rem">Technical Adjectives (صفات تقنية)</h3>
+<div class="vw">
+<div class="vi"><b>Compact</b> = small and easy to carry<div class="ar">صغير الحجم</div></div>
+<div class="vi"><b>Durable</b> = strong and long-lasting<div class="ar">متين / يتحمل</div></div>
+<div class="vi"><b>Efficient</b> = works well without waste<div class="ar">فعّال / كفؤ</div></div>
+<div class="vi"><b>Portable</b> = easy to carry around<div class="ar">محمول / سهل النقل</div></div>
+<div class="vi"><b>Reliable</b> = can be trusted; works well<div class="ar">موثوق / يُعتمد عليه</div></div>
+</div>
+<div class="ez">Compact = صغير تقدر تحطه في جيبك. Durable = ما ينكسر بسهولة (متين). Efficient = يسوي الشغل بأقل جهد. Portable = تقدر تاخذه معك وين ما رحت. Reliable = تقدر تعتمد عليه 100%.</div>
+
+<h3>📗 القواعد - Adjectives before Nouns الصفة قبل الاسم</h3>
+<div class="fm">In English: adjective comes BEFORE the noun<small>
+a <b>compact</b> model ✅ ← صح (الصفة قبل الاسم)<br>
+a model <b>compact</b> ❌ ← خطأ! (في العربي الصفة بعد الاسم، لكن في الإنجليزي العكس!)</small></div>
+<div class="ez">في العربي نقول "جهاز صغير" (الاسم أولاً ثم الصفة). لكن في الإنجليزي العكس: "small device" (الصفة أولاً ثم الاسم). <b>دائماً الصفة قبل الاسم في الإنجليزي!</b></div>
+
+<div class="cb g"><div class="lb gr">✏️ تمارين محلولة</div>
+<div class="en"><b>1.</b> Choose: A) model compact B) <span class="hl3">compact model ✅</span> C) compactly model</div>
+<div style="color:#94a3b8;font-size:.78rem">الصفة compact تجي قبل الاسم model</div>
+<div class="en"><b>2.</b> The device is designed _____ daily use. → <span class="hl3">for ✅</span> (designed for = مصمم لـ)</div>
+<div class="en"><b>3.</b> Choose: A) <span class="hl3">It is a portable and reliable system. ✅</span> B) portable and reliability system</div>
+<div style="color:#94a3b8;font-size:.78rem">portable و reliable كلهم صفات (adjectives). لكن reliability اسم (noun) فما تصلح هنا.</div>
+</div>
+</div>`;
+
+// ═══════════════════════════════════
+//     MODULE 5: Comparisons
+// ═══════════════════════════════════
+sections.m5=`<div class="card">
+<h2 style="color:#a78bfa">⚖️ Module 5: Comparisons + Data</h2>
+
+<h3>📖 المفردات - Vocabulary</h3>
+<div class="tw"><table>
+<tr><th>Word</th><th>English Meaning</th><th>المعنى بالعربي</th></tr>
+<tr><td><b>Similar</b></td><td>Almost the same</td><td>متشابه</td></tr>
+<tr><td><b>Different</b></td><td>Not the same</td><td>مختلف</td></tr>
+<tr><td><b>Higher / Lower</b></td><td>More / Less (in level)</td><td>أعلى / أقل</td></tr>
+<tr><td><b>Faster / Slower</b></td><td>More / Less speed</td><td>أسرع / أبطأ</td></tr>
+<tr><td><b>Increase</b></td><td>To go up; become more</td><td>يزداد / يرتفع</td></tr>
+<tr><td><b>Decrease</b></td><td>To go down; become less</td><td>ينخفض / يقل</td></tr>
+<tr><td><b>Average</b></td><td>The middle or typical value</td><td>متوسط</td></tr>
+<tr><td><b>Percentage</b></td><td>Part of a whole (out of 100)</td><td>نسبة مئوية</td></tr>
+<tr><td><b>Advantage</b></td><td>A good point; a benefit</td><td>ميزة / فائدة</td></tr>
+<tr><td><b>Disadvantage</b></td><td>A bad point; a weakness</td><td>عيب / نقطة ضعف</td></tr>
+<tr><td><b>Benefit</b></td><td>Something good you get</td><td>فائدة</td></tr>
+<tr><td><b>Limitation</b></td><td>A restriction or weakness</td><td>قيد / محدودية</td></tr>
+</table></div>
+
+<h3>📗 القواعد - Comparatives & Superlatives المقارنة والتفضيل</h3>
+
+<div class="cb"><div class="lb bl">🎯 Comparatives المقارنة (بين شيئين)</div>
+<b>صفة قصيرة (1-2 مقطع):</b> نضيف <b>-er</b> + <b>than</b><br>
+<span class="en">fast → fast<b>er than</b> | light → light<b>er than</b> | cheap → cheap<b>er than</b></span><br><br>
+<b>صفة طويلة (3 مقاطع+):</b> نضيف <b>more</b> + <b>than</b><br>
+<span class="en">expensive → <b>more</b> expensive <b>than</b> | powerful → <b>more</b> powerful <b>than</b></span></div>
+
+<div class="cb o"><div class="lb or">🎯 Superlatives التفضيل (بين ثلاثة أو أكثر)</div>
+<b>صفة قصيرة:</b> نضيف <b>the -est</b><br>
+<span class="en">fast → <b>the</b> fast<b>est</b> | light → <b>the</b> light<b>est</b></span><br><br>
+<b>صفة طويلة:</b> نضيف <b>the most</b><br>
+<span class="en">expensive → <b>the most</b> expensive | powerful → <b>the most</b> powerful</span></div>
+
+<div class="ez">المقارنة = تقارن بين شيئين فقط: "هذا الجوال <b>أسرع من</b> ذاك" ← faster <b>than</b><br>
+التفضيل = تقارن بين 3 أو أكثر وتختار الأفضل: "هذا <b>الأسرع</b> بين الثلاثة" ← <b>the</b> fastest<br><br>
+<b>حيلة سهلة:</b> صفة قصيرة (fast, big, cheap) ← أضف er/est. صفة طويلة (expensive, beautiful) ← أضف more/most.</div>
+
+<div class="cb g"><div class="lb gr">✏️ تمارين محلولة</div>
+<div class="en"><b>1.</b> App A is ______ App B. → <span class="hl3">faster than ✅</span> (مقارنة بين اثنين)</div>
+<div class="en"><b>2.</b> Laptop X is ______ Laptop Y. → <span class="hl3">more expensive than ✅</span> (expensive طويلة)</div>
+<div class="en"><b>3.</b> This tablet is ______ that tablet. → <span class="hl3">lighter than ✅</span></div>
+<div class="en"><b>4.</b> Device B has ______ battery life. → <span class="hl3">the longest ✅</span> (تفضيل)</div>
+</div>
+
+<h3>📖 قطعة القراءة - Comparing Two Devices</h3>
+<div class="enb"><div class="et">📖 Comparing Two Devices</div>
+Device A is lighter and faster, suitable for mobile use. Device B is larger and heavier but provides stronger performance for long study sessions.<br><br>
+Battery life: Device A operates for 8 hours, Device B for 12 hours. Device A charges more quickly. Device A is cheaper, Device B is more expensive due to higher performance.<br><br>
+Overall: Device A is suitable for basic tasks. Device B is better for advanced academic use.</div>
+
+<div class="cb g"><div class="lb gr">أسئلة الفهم</div>
+<div class="en"><b>1. One advantage of Device A?</b> → <span class="hl3">B) Faster charging ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">ميزة جهاز A = يشحن أسرع (charges more quickly)</div>
+<div class="en"><b>2. Which device is better for advanced use?</b> → <span class="hl3">B) Device B ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">جهاز B أفضل للاستخدام المتقدم لأن أداؤه أقوى</div>
+</div>
+</div>`;
+
+// ═══════════════════════════════════
+//     MODULE 6: Instructions
+// ═══════════════════════════════════
+sections.m6=`<div class="card">
+<h2 style="color:#fbbf24">📋 Module 6: Instructions & Processes</h2>
+
+<h3>📖 المفردات - Vocabulary</h3>
+<h3 style="color:#fbbf24;font-size:.85rem">Sequencing Language (كلمات الترتيب) ⭐</h3>
+<div class="tw"><table>
+<tr><th>Word</th><th>English Meaning</th><th>المعنى بالعربي</th><th>Usage</th></tr>
+<tr><td><b>First</b></td><td>At the beginning</td><td>أولاً</td><td class="en">First, download the app.</td></tr>
+<tr><td><b>Next</b></td><td>After that; the following step</td><td>بعد ذلك / ثانياً</td><td class="en">Next, open the file.</td></tr>
+<tr><td><b>Then</b></td><td>After the previous step</td><td>ثم</td><td class="en">Then, enter your password.</td></tr>
+<tr><td><b>After that</b></td><td>Following the previous action</td><td>بعد ذلك</td><td class="en">After that, click submit.</td></tr>
+<tr><td><b>Finally</b></td><td>The last step</td><td>أخيراً</td><td class="en">Finally, restart the system.</td></tr>
+</table></div>
+
+<h3 style="color:#fbbf24;font-size:.85rem">Process & Action Vocabulary</h3>
+<div class="vw">
+<div class="vi"><b>Process</b> = a series of actions<div class="ar">عملية (سلسلة خطوات)</div></div>
+<div class="vi"><b>Step</b> = one action in a process<div class="ar">خطوة</div></div>
+<div class="vi"><b>Instruction</b> = tells you what to do<div class="ar">تعليمة / إرشاد</div></div>
+<div class="vi"><b>Procedure</b> = a set of steps to follow<div class="ar">إجراء</div></div>
+<div class="vi"><b>Method</b> = a way of doing something<div class="ar">طريقة / أسلوب</div></div>
+<div class="vi"><b>Install</b> = to put software on a device<div class="ar">يُثبّت (برنامج)</div></div>
+<div class="vi"><b>Activate</b> = to make something start working<div class="ar">يُفعّل</div></div>
+<div class="vi"><b>Connect</b> = to join/link to something<div class="ar">يربط / يوصّل</div></div>
+<div class="vi"><b>Submit</b> = to send for review<div class="ar">يُرسل / يُسلّم</div></div>
+<div class="vi"><b>Complete</b> = to finish<div class="ar">يُكمل / يُنهي</div></div>
+</div>
+
+<h3>📗 القواعد - Imperatives صيغة الأمر</h3>
+<div class="fm">Imperative = Base verb (start with the verb directly!)<small>
+Download the file. ← حمّل الملف (ابدأ بالفعل مباشرة!)<br>
+Open the application. ← افتح التطبيق<br>
+Follow the instructions. ← اتبع التعليمات</small></div>
+<div class="ez">صيغة الأمر = ابدأ بالفعل مباشرة بدون فاعل! بدل ما تقول "You should download" ← قل فقط "Download!" وهذا اللي نستخدمه في التعليمات والخطوات: "First, <b>open</b> the app. Next, <b>click</b> login. Then, <b>enter</b> your password."</div>
+
+<h3>📖 قطعة القراءة - Installing Software</h3>
+<div class="enb"><div class="et">📖 Following Instructions</div>
+Installing a software application usually involves several clear steps. <b>First</b>, users download the application from an official website. <b>Next</b>, they open the installation file and follow the on-screen instructions. <b>After</b> the installation is complete, users activate the software using an account or license key. <b>Finally</b>, the system checks the configuration to make sure the application works correctly.</div>
+
+<div class="cb g"><div class="lb gr">أسئلة الفهم</div>
+<div class="en"><b>1. What is the first step?</b> → <span class="hl3">B) Downloading the application ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">أول خطوة = تحميل التطبيق من الموقع الرسمي</div>
+<div class="en"><b>2. Why are clear instructions important?</b> → <span class="hl3">B) They reduce errors ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">التعليمات الواضحة تقلل الأخطاء وتوفر الوقت</div>
+<div class="en"><b>3. What happens after installation?</b> → <span class="hl3">B) The software is activated ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">بعد التثبيت = تفعيل البرنامج بحساب أو مفتاح ترخيص</div>
+</div>
+</div>`;
+
+// ═══════════════════════════════════
+//     QUIZ - 50 Questions
+// ═══════════════════════════════════
+const Q=[
+// Module 2 - Vocabulary
+{q:"A 'prompt' is:",o:["A type of robot","A message typed by the user","An output file","A system error"],c:1,e:"الـ prompt = رسالة/أمر يكتبه المستخدم للذكاء الاصطناعي"},
+{q:"'Generate' means:",o:["Delete","Copy","Create something new","Save"],c:2,e:"Generate = يُنشئ / يُولّد شيء جديد"},
+{q:"'Output' refers to:",o:["User input","System error","What AI produces as a result","A password"],c:2,e:"Output = المخرجات / النتيجة التي ينتجها AI"},
+{q:"A 'chatbot' is:",o:["A type of hardware","A program that talks to users","A storage device","An update"],c:1,e:"Chatbot = برنامج محادثة آلي يتحدث مع المستخدمين"},
+{q:"'Digital' means:",o:["Old-fashioned","Related to electronic technology","Manual","Physical"],c:1,e:"Digital = رقمي / إلكتروني"},
+// Module 2 - Grammar
+{q:"Choose: 'AI _____ answers.'",o:["generate","generates","generating","generated"],c:1,e:"AI = it ← نضيف s للفعل: generates"},
+{q:"Choose: 'Chatbots _____ not understand feelings.'",o:["does","do","is","are"],c:1,e:"Chatbots = they ← نستخدم do not"},
+{q:"Make a question: 'AI helps students.'",o:["Is AI helps students?","Does AI help students?","Do AI helps students?","AI does help students?"],c:1,e:"AI = it ← Does + AI + base verb (help بدون s)"},
+{q:"'The system _____ data.' (negative)",o:["don't use","doesn't uses","doesn't use","not use"],c:2,e:"system = it ← doesn't + base verb (use بدون s)"},
+// Module 2 - Reading
+{q:"AI helps students by:",o:["Cooking food","Explaining ideas","Driving cars","Building houses"],c:1,e:"AI يساعد الطلاب بتوضيح الأفكار وإنشاء خطط دراسية"},
+{q:"AI is always correct. True or False?",o:["True","False"],c:1,e:"خطأ! AI يخطئ أحياناً: 'AI can misunderstand prompts'"},
+{q:"Translation apps help with:",o:["Weather reports","New words and sentences","Music playlists","Cooking recipes"],c:1,e:"تطبيقات الترجمة تساعد في فهم كلمات وجمل جديدة"},
+// Module 3 - Vocabulary
+{q:"'Storage' refers to:",o:["Electricity","Memory / space for data","Speed","Color"],c:1,e:"Storage = مساحة التخزين / الذاكرة"},
+{q:"'Configure' means:",o:["Delete","Set up","Break","Ignore"],c:1,e:"Configure = يُهيئ / يضبط الإعدادات"},
+{q:"'Interface' means:",o:["Hardware inside","User control screen","A virus","Storage"],c:1,e:"Interface = واجهة المستخدم (الشاشة اللي تتعامل معها)"},
+{q:"'Version' means:",o:["A software release","A sensor","Voltage","A bug"],c:0,e:"Version = إصدار / نسخة من البرنامج (مثل v1.0, v2.0)"},
+// Module 3 - Grammar (Passive)
+{q:"Change to passive: 'The system processes data.'",o:["Data is processed.","Data are processed.","Data processed.","Data is process."],c:0,e:"data مفرد ← is + processed (التصريف الثالث)"},
+{q:"'Updates _____ automatically.'",o:["is installed","are installed","installed","installing"],c:1,e:"Updates جمع ← are + installed"},
+{q:"'Data _____ in the cloud.'",o:["are stored","is stored","stored","storing"],c:1,e:"Data مفرد ← is + stored"},
+{q:"The passive form of 'The technician fixes the issue' is:",o:["The issue is fixed.","The issue are fixed.","The issue fixed.","The issue is fix."],c:0,e:"issue مفرد ← is + fixed"},
+// Module 3 - Reading
+{q:"The 'brain' of the smart home is:",o:["The sensor","The central hub","The camera","The light"],c:1,e:"الـ hub المركزي = دماغ البيت الذكي"},
+{q:"Smart thermostats help with:",o:["Entertainment","Temperature control","Gaming","Cooking"],c:1,e:"الثيرموستات = يتحكم بدرجة الحرارة"},
+// Module 4 - Vocabulary
+{q:"'Compact' means:",o:["Very large","Small and easy to carry","Expensive","Slow"],c:1,e:"Compact = صغير الحجم وسهل الحمل"},
+{q:"'Durable' means:",o:["Weak","Strong and long-lasting","Cheap","Fast"],c:1,e:"Durable = متين ويتحمل"},
+{q:"'Compatible with' means:",o:["Cannot work with","Able to work with other devices","Designed for","Made of"],c:1,e:"Compatible with = متوافق مع (يشتغل مع أجهزة ثانية)"},
+{q:"'Equipped with' means:",o:["Missing","Has or contains","Broken","Old"],c:1,e:"Equipped with = مجهّز بـ"},
+{q:"'Reliable' means:",o:["Unreliable","Can be trusted","Temporary","Broken"],c:1,e:"Reliable = موثوق / يعتمد عليه"},
+// Module 4 - Grammar
+{q:"Choose: 'a _____ model'",o:["model compact","compact model","compactly model","model compactly"],c:1,e:"الصفة تجي قبل الاسم في الإنجليزي: compact model"},
+{q:"'The device _____ several sensors.'",o:["include","includes","including","included"],c:1,e:"device = it ← includes (Present Simple + s)"},
+{q:"Which is correct?",o:["The device is designed for daily use.","The device designed for daily use.","The device is design daily use.","The device is designed daily."],c:0,e:"is designed for = مصمم لـ (passive + for)"},
+// Module 5 - Vocabulary
+{q:"'Advantage' means:",o:["A problem","A benefit","A mistake","A limitation"],c:1,e:"Advantage = ميزة / فائدة"},
+{q:"The opposite of 'increase' is:",o:["Average","Percentage","Decrease","Difference"],c:2,e:"عكس increase (يزداد) = decrease (ينخفض)"},
+{q:"'Limitation' means:",o:["An advantage","A benefit","A restriction or weakness","A feature"],c:2,e:"Limitation = قيد / محدودية / نقطة ضعف"},
+{q:"'Average' means:",o:["The highest value","The lowest value","The middle or typical value","The final result"],c:2,e:"Average = المتوسط / القيمة النموذجية"},
+// Module 5 - Grammar (Comparatives)
+{q:"'Device A is _____ Device B.'",o:["faster","faster than","fastest","more fast"],c:1,e:"مقارنة بين اثنين ← faster than"},
+{q:"'Laptop X is _____ Laptop Y.'",o:["more expensive than","most expensive","expensive","expensiver than"],c:0,e:"expensive صفة طويلة ← more expensive than"},
+{q:"'Device B has _____ battery life.'",o:["the longer","the longest","longer than","more long"],c:1,e:"تفضيل (أطول بين الكل) ← the longest"},
+{q:"'This tablet is _____ that tablet.'",o:["lighter than","lightest","more light","light"],c:0,e:"مقارنة ← lighter than"},
+// Module 5 - Reading
+{q:"Device A charges:",o:["Slowly","More quickly than B","The same as B","Never"],c:1,e:"جهاز A يشحن أسرع من B"},
+{q:"Which is better for advanced use?",o:["Device A","Device B","Both","Neither"],c:1,e:"جهاز B أفضل للاستخدام المتقدم"},
+{q:"During exam weeks, platform usage:",o:["Decreased","Stayed the same","Increased","Stopped"],c:2,e:"أسابيع الاختبارات: الاستخدام يزداد (increased)"},
+// Module 6 - Vocabulary
+{q:"'First' means:",o:["At the end","At the beginning","In the middle","Never"],c:1,e:"First = أولاً / في البداية"},
+{q:"'Procedure' means:",o:["One action","A set of steps to follow","A mistake","A machine"],c:1,e:"Procedure = إجراء (مجموعة خطوات)"},
+{q:"'Activate' means:",o:["Stop something","Make something start working","Delete something","Hide something"],c:1,e:"Activate = يُفعّل (يخلي الشيء يشتغل)"},
+{q:"'Submit' means:",o:["Delete","Download","Send for review","Restart"],c:2,e:"Submit = يُرسل / يُسلّم (مثل تسليم واجب)"},
+{q:"'Install' means:",o:["Remove software","Put software on a device","Break a device","Update"],c:1,e:"Install = يُثبّت برنامج على الجهاز"},
+// Module 6 - Grammar (Imperatives)
+{q:"Choose the correct instruction:",o:["You download the file.","Download the file.","Downloading the file.","The file downloads."],c:1,e:"صيغة الأمر = ابدأ بالفعل مباشرة: Download!"},
+{q:"Choose the correct passive:",o:["The user uploads the file.","The file is uploaded.","The file upload.","Upload the file."],c:1,e:"Passive = The file is uploaded (المبني للمجهول)"},
+{q:"Choose the correct sentence:",o:["First, the system activate.","First, activate the system.","First, system is activate.","First, activating the system."],c:1,e:"First + imperative = First, activate the system."},
+// Module 6 - Reading
+{q:"What is the first step in installing software?",o:["Activating the software","Downloading the application","Checking configuration","Contacting support"],c:1,e:"أول خطوة = تحميل التطبيق من الموقع الرسمي"},
+{q:"Why are clear instructions important?",o:["They increase cost","They reduce errors","They remove steps","They slow the process"],c:1,e:"التعليمات الواضحة تقلل الأخطاء وتوفر الوقت"},
+];
+
+sections.quiz='<div class="sb"><div class="sn2" id="scoreDisp">0 / '+Q.length+'</div><button class="rb" onclick="resetQuiz()">🔄 Reset</button></div><div id="qContainer"></div>';
+let answers={};
+function initQuiz(){answers={};const c=document.getElementById('qContainer');if(!c)return;c.innerHTML='';Q.forEach((q,i)=>{const d=document.createElement('div');d.className='qc';d.innerHTML='<h4>Q'+(i+1)+': '+q.q+'</h4><div id="opts'+i+'">'+q.o.map((o,j)=>'<div class="qo" onclick="checkA('+i+','+j+')" id="o'+i+'_'+j+'">'+String.fromCharCode(65+j)+') '+o+'</div>').join('')+'</div><div class="qe" id="exp'+i+'">'+q.e+'</div>';c.appendChild(d)});updateScore();}
+window.checkA=function(qi,oi){if(answers[qi]!==undefined)return;answers[qi]=oi;const correct=Q[qi].c;const exp=document.getElementById('exp'+qi);document.querySelectorAll('#opts'+qi+' .qo').forEach(o=>o.classList.add('d'));if(oi===correct){document.getElementById('o'+qi+'_'+oi).classList.add('ok');exp.className='qe s ok';exp.innerHTML='✅ '+Q[qi].e;}else{document.getElementById('o'+qi+'_'+oi).classList.add('no');document.getElementById('o'+qi+'_'+correct).classList.add('ok');exp.className='qe s no';exp.innerHTML='❌ '+Q[qi].e;}updateScore();};
+function updateScore(){const s=Object.entries(answers).filter(([k,v])=>v===Q[k].c).length;const el=document.getElementById('scoreDisp');if(el)el.textContent=s+' / '+Q.length;}
+window.resetQuiz=function(){answers={};initQuiz();window.scrollTo({top:0,behavior:'smooth'});};
+
+render();
+</script>
+</body>
+</html>

@@ -77,7 +77,7 @@ const tabs=[
 {id:'m6',icon:'📋',label:'Module 6: Instructions'},
 {id:'rev',icon:'📚',label:'Grammar & Vocab Review'},
 {id:'rq',icon:'👩‍🏫',label:"Instructor's Review (40Q)"},
-{id:'quiz',icon:'✅',label:'Quiz (62 Q)'}
+{id:'quiz',icon:'✅',label:'Quiz (70 Q)'}
 ];
 let currentTab='m2';
 const tabsEl=document.getElementById('tabs');
@@ -1169,6 +1169,18 @@ const Q=[
 // Prepositions
 {q:"'Data is stored _____ the cloud.'",o:["at","on","in"],c:2,e:"in the cloud = في السحابة. in = داخل شيء"},
 {q:"'The app is available _____ different sizes.'",o:["in","on","at"],c:0,e:"available in = متوفر بـ. تعبير ثابت من المقرر Module 4"},
+// M2 Reading - AI limitations
+{q:"Users must review AI output because:",o:["AI is always correct","AI can generate incorrect information","AI is too slow","AI costs money"],c:1,e:"من المقرر: AI can misunderstand prompts or generate incorrect information. لازم تراجع مخرجات AI قبل ما تستخدمها"},
+{q:"AI writing tools can:",o:["Replace all teachers","Check grammar and suggest vocabulary","Cook meals","Drive cars"],c:1,e:"من المقرر: AI writing tools check grammar and suggest better vocabulary"},
+// M3 Reading - Mobile OS
+{q:"The mobile OS prioritizes navigation apps over games because:",o:["Games are boring","Navigation delivers real-time directions","Games use less memory","Navigation is free"],c:1,e:"من المقرر: navigation apps receive higher priority because they deliver real-time directions"},
+{q:"When storage becomes low, the OS:",o:["Deletes all files","Shuts down","Warns the user","Installs updates"],c:2,e:"من المقرر: When storage becomes low, the OS warns the user. النظام ينبّه المستخدم"},
+// M4 - Descriptive phrases
+{q:"'A system _____ advanced security features.'",o:["equipped with","designed for","available in"],c:0,e:"equipped with = مجهّز بـ. نظام مجهّز بميزات أمان متقدمة"},
+{q:"'This model is _____ students who need basic performance.'",o:["compatible with","equipped with","suitable for"],c:2,e:"suitable for = مناسب لـ. الموديل مناسب للطلاب اللي يحتاجون أداء بسيط"},
+// M5 Reading - Data
+{q:"On weekdays, platform usage was:",o:["Lower than weekends","The same as weekends","Higher than weekends","Zero"],c:2,e:"من المقرر: On weekdays, usage was higher, while on weekends it was lower"},
+{q:"What percentage of students used the platform occasionally?",o:["60%","20%","40%","80%"],c:2,e:"من المقرر: sixty percent used it daily, forty percent used it occasionally. يعني 40% أحياناً"},
 ];
 
 sections.quiz='<div class="sb"><div class="sn2" id="scoreDisp">0 / '+Q.length+'</div><button class="rb" onclick="resetQuiz()">🔄 Reset</button></div><div id="qContainer"></div>';

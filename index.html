@@ -77,7 +77,7 @@ const tabs=[
 {id:'m6',icon:'📋',label:'Module 6: Instructions'},
 {id:'rev',icon:'📚',label:'Grammar & Vocab Review'},
 {id:'rq',icon:'👩‍🏫',label:"Instructor's Review (40Q)"},
-{id:'quiz',icon:'✅',label:'Quiz (66 Q)'}
+{id:'quiz',icon:'✅',label:'Quiz (62 Q)'}
 ];
 let currentTab='m2';
 const tabsEl=document.getElementById('tabs');
@@ -1153,26 +1153,22 @@ const Q=[
 // Module 6 - Reading
 {q:"What is the first step in installing software?",o:["Activating the software","Downloading the application","Checking configuration","Contacting support"],c:1,e:"أول خطوة = تحميل التطبيق من الموقع الرسمي"},
 {q:"Why are clear instructions important?",o:["They increase cost","They reduce errors","They remove steps","They slow the process"],c:1,e:"التعليمات الواضحة تقلل الأخطاء وتوفر الوقت"},
-// Verb to be (am/is/are)
-{q:"'I _____ an AI student.'",o:["am","is","are"],c:0,e:"I ← am دائماً. He/She/It ← is. You/We/They ← are"},
-{q:"'He _____ a doctor.'",o:["am","is","are"],c:1,e:"He ← is. قاعدة: He/She/It + is"},
-{q:"'They _____ in the computer lab.'",o:["is","am","are"],c:2,e:"They ← are. قاعدة: You/We/They + are"},
-{q:"'She _____ not from this class.'",o:["is","am","are"],c:0,e:"She ← is not (isn't). المفرد الغائب دائماً is"},
+// Verb to be
+{q:"'The smart home system _____ connected to the internet.'",o:["am","are","is"],c:2,e:"system = it ← is. النظام متصل بالإنترنت"},
+{q:"'The sensors _____ built into the wearable device.'",o:["is","are","am"],c:1,e:"sensors = جمع ← are. المستشعرات مدمجة في الجهاز"},
+{q:"'_____ the update available now?'",o:["Are","Am","Is"],c:2,e:"update = مفرد ← Is. هل التحديث متوفر الآن؟"},
 // There is / There are
-{q:"'_____ a hospital in this street.'",o:["There is","There are","There am"],c:0,e:"hospital = مفرد ← There is. قاعدة: There is + مفرد | There are + جمع"},
-{q:"'_____ offices in the building.'",o:["There is","There are","There no"],c:1,e:"offices = جمع ← There are. يوجد مكاتب = There are offices"},
-{q:"'_____ a computer on the desk.'",o:["There are","There is","There am"],c:1,e:"computer = مفرد ← There is"},
+{q:"'_____ a new version of the software.'",o:["There are","There is","There am"],c:1,e:"version = مفرد ← There is. يوجد نسخة جديدة من البرنامج"},
+{q:"'_____ many security features in this OS.'",o:["There is","There are","There has"],c:1,e:"features = جمع ← There are. يوجد ميزات أمان كثيرة"},
 // Articles a / an
-{q:"'This is _____ computer.'",o:["an","a","the"],c:1,e:"computer تبدأ بحرف ساكن (c) ← a. نستخدم an قبل حروف العلة فقط (a,e,i,o,u)"},
-{q:"'She is _____ engineer.'",o:["a","an","the"],c:1,e:"engineer تبدأ بحرف علة (e) ← an. قاعدة: an + حرف علة (a,e,i,o,u)"},
-{q:"'He works in _____ office.'",o:["a","an","the"],c:1,e:"office تبدأ بحرف علة (o) ← an office"},
+{q:"'The OS sends _____ alert to the user.'",o:["a","an","the"],c:1,e:"alert تبدأ بحرف علة (a) ← an alert"},
+{q:"'ChatGPT is _____ useful tool for students.'",o:["an","a","the"],c:1,e:"useful تبدأ بصوت ساكن (يُنطق /juː/) ← a useful. انتبه: الصوت هو المهم وليس الحرف!"},
 // Irregular Plurals
-{q:"The plural of 'child' is:",o:["childs","childrens","children"],c:2,e:"child ← children (جمع شاذ). وليس childs! مثل: man→men, woman→women"},
-{q:"The plural of 'man' is:",o:["mans","mens","men"],c:2,e:"man ← men (جمع شاذ). وليس mans!"},
-{q:"The plural of 'box' is:",o:["boxs","boxes","boxies"],c:1,e:"box ← boxes. قاعدة: الكلمات المنتهية بـ x, s, sh, ch ← نضيف es"},
+{q:"The plural of 'device' is:",o:["devics","devicees","devices"],c:2,e:"device ← devices. قاعدة عادية: نضيف s"},
+{q:"The plural of 'process' is:",o:["processs","processes","process"],c:1,e:"process تنتهي بـ s ← نضيف es: processes"},
 // Prepositions
-{q:"'The cable is _____ the table.'",o:["on","at","between"],c:0,e:"on = على سطح شيء. الكيبل على الطاولة = on the table"},
-{q:"'The meeting is _____ 7 o'clock.'",o:["on","at","in"],c:1,e:"at = مع الأوقات المحددة. الاجتماع الساعة 7 = at 7 o'clock"},
+{q:"'Data is stored _____ the cloud.'",o:["at","on","in"],c:2,e:"in the cloud = في السحابة. in = داخل شيء"},
+{q:"'The app is available _____ different sizes.'",o:["in","on","at"],c:0,e:"available in = متوفر بـ. تعبير ثابت من المقرر Module 4"},
 ];
 
 sections.quiz='<div class="sb"><div class="sn2" id="scoreDisp">0 / '+Q.length+'</div><button class="rb" onclick="resetQuiz()">🔄 Reset</button></div><div id="qContainer"></div>';

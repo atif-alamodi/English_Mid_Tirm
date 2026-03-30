@@ -77,7 +77,7 @@ const tabs=[
 {id:'m6',icon:'📋',label:'Module 6: Instructions'},
 {id:'rev',icon:'📚',label:'Grammar & Vocab Review'},
 {id:'rq',icon:'👩‍🏫',label:"Instructor's Review (40Q)"},
-{id:'quiz',icon:'✅',label:'Quiz (50 Q)'}
+{id:'quiz',icon:'✅',label:'Quiz (66 Q)'}
 ];
 let currentTab='m2';
 const tabsEl=document.getElementById('tabs');
@@ -627,6 +627,72 @@ sections.rev=`<div class="card">
 
 <h3 style="color:#38bdf8">━━━ PART 1: GRAMMAR REVIEW ━━━</h3>
 
+<h3>0️⃣ Verb to Be (am / is / are)</h3>
+<div class="cb"><div class="lb bl">Rules (القواعد)</div>
+<div class="en">
+<b>I</b> → <b>am</b> → I <b>am</b> a student.<br>
+<b>He / She / It</b> → <b>is</b> → He <b>is</b> a doctor. | She <b>is</b> an engineer. | It <b>is</b> a smart device.<br>
+<b>You / We / They</b> → <b>are</b> → They <b>are</b> in the lab. | We <b>are</b> students.<br><br>
+<b>Negative:</b> am not / is not (isn't) / are not (aren't)<br>
+• I <b>am not</b> late. | He <b>isn't</b> here. | They <b>aren't</b> from this class.<br><br>
+<b>Questions:</b> Am I...? / Is he...? / Are they...?<br>
+• <b>Is</b> he a student? Yes, he is. | <b>Are</b> they in the lab? No, they aren't.
+</div></div>
+<div class="ez">أبسط قاعدة: I ← am | He/She/It ← is | You/We/They ← are. احفظها وخلاص!</div>
+
+<h3>0️⃣ There is / There are</h3>
+<div class="cb"><div class="lb bl">Rules (القواعد)</div>
+<div class="en">
+<b>There is</b> + singular noun → <b>There is</b> a hospital in this street.<br>
+<b>There are</b> + plural noun → <b>There are</b> offices in the building.<br><br>
+<b>More examples:</b><br>
+• <b>There is</b> a computer on the desk. (مفرد)<br>
+• <b>There are</b> five students in the class. (جمع)<br>
+• <b>There is</b> an update available. (مفرد)<br>
+• <b>There are</b> many features in this app. (جمع)
+</div></div>
+<div class="ez">مفرد (واحد) ← There is | جمع (أكثر من واحد) ← There are. بس كذا!</div>
+
+<h3>0️⃣ Articles: a / an</h3>
+<div class="cb"><div class="lb bl">Rules (القواعد)</div>
+<div class="en">
+<b>a</b> → before consonant sounds: a <b>c</b>omputer | a <b>d</b>evice | a <b>s</b>ystem | a <b>t</b>ool<br>
+<b>an</b> → before vowel sounds (a, e, i, o, u): an <b>a</b>pp | an <b>e</b>ngineer | an <b>o</b>ffice | an <b>u</b>pdate<br><br>
+<b>Examples:</b><br>
+• This is <b>a</b> computer. (c = consonant)<br>
+• She is <b>an</b> engineer. (e = vowel)<br>
+• He works in <b>an</b> office. (o = vowel)<br>
+• I have <b>a</b> meeting at 7. (m = consonant)
+</div></div>
+<div class="ez">a = قبل الحروف الساكنة (b,c,d,f,g...). an = قبل حروف العلة (a,e,i,o,u). مثل: a computer لكن an app</div>
+
+<h3>0️⃣ Irregular Plurals + Plural Rules</h3>
+<div class="cb"><div class="lb bl">Rules (القواعد)</div>
+<div class="en">
+<b>Regular plurals:</b> add <b>-s</b>: device → device<b>s</b> | student → student<b>s</b><br>
+<b>Words ending in s, x, sh, ch:</b> add <b>-es</b>: box → box<b>es</b> | class → class<b>es</b><br><br>
+<b>Irregular plurals (حفظ!):</b><br>
+• child → <b>children</b> (NOT childs!)<br>
+• man → <b>men</b> (NOT mans!)<br>
+• woman → <b>women</b> (NOT womans!)<br>
+• person → <b>people</b> (NOT persons!)
+</div></div>
+<div class="ez">أغلب الكلمات نضيف s للجمع. لكن فيه كلمات شاذة لازم تحفظها: child←children, man←men. والكلمات اللي تنتهي بـ x,s,sh,ch نضيف es مو بس s (box←boxes)</div>
+
+<h3>0️⃣ Prepositions (on / at / in)</h3>
+<div class="cb"><div class="lb bl">Rules (القواعد)</div>
+<div class="en">
+<b>on</b> = on a surface: The cable is <b>on</b> the table. | The file is <b>on</b> the desktop.<br>
+<b>at</b> = specific time or place: The meeting is <b>at</b> 7 o'clock. | He is <b>at</b> work.<br>
+<b>in</b> = inside / months / years: She works <b>in</b> a bank. | I was born <b>in</b> March.<br><br>
+<b>More examples:</b><br>
+• The doctor works <b>in</b> a hospital.<br>
+• The class starts <b>at</b> 9 AM.<br>
+• The book is <b>on</b> the shelf.<br>
+• We study <b>in</b> the library.
+</div></div>
+<div class="ez">on = على سطح شيء (on the table). at = وقت محدد أو مكان محدد (at 7, at work). in = داخل شيء أو شهور/سنوات (in a bank, in March)</div>
+
 <h3>1️⃣ Present Simple Tense</h3>
 <div class="cb"><div class="lb bl">Rules (القواعد)</div>
 <div class="en">
@@ -1087,6 +1153,26 @@ const Q=[
 // Module 6 - Reading
 {q:"What is the first step in installing software?",o:["Activating the software","Downloading the application","Checking configuration","Contacting support"],c:1,e:"أول خطوة = تحميل التطبيق من الموقع الرسمي"},
 {q:"Why are clear instructions important?",o:["They increase cost","They reduce errors","They remove steps","They slow the process"],c:1,e:"التعليمات الواضحة تقلل الأخطاء وتوفر الوقت"},
+// Verb to be (am/is/are)
+{q:"'I _____ an AI student.'",o:["am","is","are"],c:0,e:"I ← am دائماً. He/She/It ← is. You/We/They ← are"},
+{q:"'He _____ a doctor.'",o:["am","is","are"],c:1,e:"He ← is. قاعدة: He/She/It + is"},
+{q:"'They _____ in the computer lab.'",o:["is","am","are"],c:2,e:"They ← are. قاعدة: You/We/They + are"},
+{q:"'She _____ not from this class.'",o:["is","am","are"],c:0,e:"She ← is not (isn't). المفرد الغائب دائماً is"},
+// There is / There are
+{q:"'_____ a hospital in this street.'",o:["There is","There are","There am"],c:0,e:"hospital = مفرد ← There is. قاعدة: There is + مفرد | There are + جمع"},
+{q:"'_____ offices in the building.'",o:["There is","There are","There no"],c:1,e:"offices = جمع ← There are. يوجد مكاتب = There are offices"},
+{q:"'_____ a computer on the desk.'",o:["There are","There is","There am"],c:1,e:"computer = مفرد ← There is"},
+// Articles a / an
+{q:"'This is _____ computer.'",o:["an","a","the"],c:1,e:"computer تبدأ بحرف ساكن (c) ← a. نستخدم an قبل حروف العلة فقط (a,e,i,o,u)"},
+{q:"'She is _____ engineer.'",o:["a","an","the"],c:1,e:"engineer تبدأ بحرف علة (e) ← an. قاعدة: an + حرف علة (a,e,i,o,u)"},
+{q:"'He works in _____ office.'",o:["a","an","the"],c:1,e:"office تبدأ بحرف علة (o) ← an office"},
+// Irregular Plurals
+{q:"The plural of 'child' is:",o:["childs","childrens","children"],c:2,e:"child ← children (جمع شاذ). وليس childs! مثل: man→men, woman→women"},
+{q:"The plural of 'man' is:",o:["mans","mens","men"],c:2,e:"man ← men (جمع شاذ). وليس mans!"},
+{q:"The plural of 'box' is:",o:["boxs","boxes","boxies"],c:1,e:"box ← boxes. قاعدة: الكلمات المنتهية بـ x, s, sh, ch ← نضيف es"},
+// Prepositions
+{q:"'The cable is _____ the table.'",o:["on","at","between"],c:0,e:"on = على سطح شيء. الكيبل على الطاولة = on the table"},
+{q:"'The meeting is _____ 7 o'clock.'",o:["on","at","in"],c:1,e:"at = مع الأوقات المحددة. الاجتماع الساعة 7 = at 7 o'clock"},
 ];
 
 sections.quiz='<div class="sb"><div class="sn2" id="scoreDisp">0 / '+Q.length+'</div><button class="rb" onclick="resetQuiz()">🔄 Reset</button></div><div id="qContainer"></div>';
